@@ -1,0 +1,87 @@
+---
+layout: default
+---
+
+<div id="home">
+    <h1>
+        {% for header in site.headers %}
+        <a class="header" href="{{ header.url }}">{{ header.name }}</a>
+        {% endfor %}
+    </h1>
+    <p/>
+
+    <h2>Getting started with pgopr</h2>
+
+    First of all, make sure that pgopr is installed and in your path by
+    using "pgopr -h". You should see
+
+    <pre>
+pgopr 0.1.0
+PostgreSQL operator for Kubernetes
+
+USAGE:
+    pgopr [SUBCOMMAND]
+
+OPTIONS:
+    -h, --help       Print help information
+    -V, --version    Print version information
+
+SUBCOMMANDS:
+    install       Install the operator
+    provision     Provision a component
+    retire        Retire a component
+    uninstall     Uninstall the operator
+    completion    Generate a shell completion file
+    generate      Generate YAML resources
+    help          Print this message or the help of the given subcommand(s)
+
+pgopr: https://pgopr.github.io/
+Report bugs: https://github.com/pgopr/pgopr/issues
+    </pre>
+
+    If you don't have pgopr in your path see our <a href="https://github.com/pgopr/pgopr/blob/main/README.md">README</a>
+    on how to compile and install pgopr in your system.
+
+    <h3>Running</h3>
+
+    We will run pgopr using the follow commands
+
+    <pre>
+KIND_EXPERIMENTAL_PROVIDER=podman kind create cluster
+pgopr install
+pgopr provision primary
+kubectl get services
+kubectl port-forward postgresql-XYZ 5432:5432
+psql -h localhost -p 5432 -U myuser mydb
+    </pre>
+
+    using 'mypass' as the password.
+    <p/>
+    
+    To shutdown the operator use
+
+    <pre>
+pgopr retire primary
+pgopr uninstall
+KIND_EXPERIMENTAL_PROVIDER=podman kind delete cluster
+    </pre>
+
+    <h3>Closing</h3>
+
+    The <a href="https://github.com/pgopr/pgopr">pgopr</a> community hopes that you find
+    the project interesting.
+    <p/>
+    Feel free to
+
+    <ul>
+      <li><a href="https://github.com/pgopr/pgopr/discussions">Ask a question</a></li>
+      <li><a href="https://github.com/pgopr/pgopr/issues">Raise an issue</a></li>
+      <li><a href="https://github.com/pgopr/pgopr/issues">Submit a feature request</a></li>
+      <li><a href="https://github.com/pgopr/pgopr/pulls">Write a code submission</a></li>
+    </ul>
+    <p/>
+    All contributions are most welcome !
+    <p/>
+    Consider giving the project a <a href="https://github.com/pgopr/pgopr/stargazers">star</a> on
+    <a href="https://github.com/pgopr/pgopr/">GitHub</a> if you find it useful.
+</div>

@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div id="home">
+    <h1>
+        {% for header in site.headers %}
+        <a class="header" href="{{ header.url }}">{{ header.name }}</a>
+        {% endfor %}
+    </h1>
+    <p/>
+
+    <h2>Features</h2>
+    <ul>
+      <li>Primary instance</li>
+      <li>Command line interface</li>
+      <li>CustomResourceDefinition interface</li>
+    </ul>
+
+    <h2>Further information</h2>
+
+    <ul>
+      <li><a href="https://github.com/pgopr/pgopr">GitHub</a></li>
+    </ul>
+</div>

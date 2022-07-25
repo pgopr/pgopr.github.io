@@ -1,0 +1,43 @@
+name: pgopr
+encoding: utf-8
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  hard_wrap: false
+  highlighter: rouge
+###
+copyright: © 2022 <a href="https://www.redhat.com">Red Hat</a>
+about: <a href="https://pgopr.github.io/">PostgreSQL operator for Kubernetes</a>
+root: https://pgopr.github.io/
+headers:
+    - name: Configuration
+      url: https://pgopr.github.io/configuration.html
+    - name: News
+      url: https://pgopr.github.io/news.html
+    - name: About
+      url: https://pgopr.github.io/about.html
+urls:
+    - text: home
+      url: https://pgopr.github.io
+      icon: https://pgopr.github.io/images/icomoon/001-home.png
+    - text: releases
+      url: https://pgopr.github.io/releases.html
+      icon: https://pgopr.github.io/images/icomoon/097-download.png
+    - text: getting started
+      url: https://pgopr.github.io/gettingstarted.html
+      icon: https://pgopr.github.io/images/icomoon/027-bullhorn.png
+
+github:
+    - text: github
+      url: https://github.com/pgopr/pgopr
+      icon: https://pgopr.github.io/images/icomoon/433-github.png
+    - text: discussions
+      url: https://github.com/pgopr/pgopr/discussions
+      icon: https://pgopr.github.io/images/icomoon/115-users.png
+    - text: issues
+      url: https://github.com/pgopr/pgopr/issues
+      icon: https://pgopr.github.io/images/icomoon/154-bug.png
+    - text: license
+      url: https://www.eclipse.org/legal/epl-2.0/
+      icon: https://pgopr.github.io/images/icomoon/034-library.png

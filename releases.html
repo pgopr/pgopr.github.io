@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<div id="home">
+  <h1>
+    {% for header in site.headers %}
+    <a class="header" href="{{ header.url }}">{{ header.name }}</a>
+    {% endfor %}
+  </h1>
+  <h2>Releases</h2>
+  <ul class="posts">
+    {% for release in site.data.releases reversed %}
+    <li class="posts"><span class="date">{{ release.date | date: "%Y %m %d" }}</span></a><a href="{{ site.root }}/{{ release.announce }}">{{ release.name }}</a></li>
+    {% endfor %}
+  </ul>
+
+</div>
